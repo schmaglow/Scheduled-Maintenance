@@ -30,21 +30,23 @@ PING -n 21 127.0.0.1>nul
 
 (
 echo.
-echo --------- 
-echo %date% 
-echo %time% 
+echo ---------
+echo %date%
+echo %time%
 call RecycleClean.bat
 ) >> C:\oecIT\Logs\RecycleClearLog.txt
+
 
  :: log and call TempClear
 
 (
 echo.
-echo --------- 
-echo %date% 
-echo %time% 
-call TempClear.bat 
+echo ---------
+echo %date%
+echo %time%
+call TempClear.bat
 ) >> C:\oecIT\Logs\TempClearLog.txt
+
 
  :: log and call NetRes
 
