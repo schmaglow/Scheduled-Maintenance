@@ -26,15 +26,6 @@ echo.
 PING -n 21 127.0.0.1>nul
 
 
-
- :: log and call DeleteScript
-
-:: echo --------- >> C:\oecIT\Logs\FileClearLog.txt
-:: echo %date% >> C:\oecIT\Logs\FileClearLog.txt
-:: echo %TIME% >> C:\oecIT\Logs\FileClearLog.txt
-:: call DeleteScript.bat >> C:\oecIT\Logs\FileClearLog.txt
-
-
  :: log and call RecycleClean
 
 (
