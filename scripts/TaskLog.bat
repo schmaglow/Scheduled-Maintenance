@@ -1,6 +1,7 @@
 @rem
 @echo off
 
+REM Force admin
 
 net session >nul
 if %errorlevel% neq 0 goto elevate nul
@@ -44,7 +45,7 @@ echo.
 echo.
 
 
-timeout /t 30
+REM timeout /t 30
 PING -n 21 127.0.0.1>nul
 
 
@@ -77,8 +78,19 @@ echo.
 echo ---------
 echo %date%
 echo %time%
-call NetRes
-) >> C:\oecIT\Logs\NetRes.txt
+call WinCacheClear.bat
+) >> C:\oecIT\Logs\CacheClearLog.txt
+
+
+REM log and call NetRes
+
+(
+echo.
+echo ---------
+echo %date%
+echo %time%
+call NetRes.bat
+) >> C:\oecIT\Logs\NetResLog.txt
 
 :EOF
 exit /b %1
