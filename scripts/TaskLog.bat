@@ -71,7 +71,7 @@ call TempClear.bat
 ) >> C:\oecIT\Logs\TempClearLog.txt
 
 
-REM log and call NetRes
+REM log and call WinCacheClear
 
 (
 echo.
