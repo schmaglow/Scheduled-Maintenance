@@ -1,7 +1,8 @@
+@rem
 @echo off
 
 
- :: Resets the network settings
+REM Resets the network settings
 
 netsh winsock reset
 netsh int ip reset

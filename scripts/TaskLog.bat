@@ -7,16 +7,12 @@ if %errorlevel% neq 0 goto elevate nul
 goto :start
 
 :elevate
-
 cd/d %~dp0
 mshta "javascript: var shell = new ActiveXObject('shell.application'); shell.ShellExecute('%~nx0', '', '', 'runas', 1);close();" >nul
 exit
 
 :start
-
-cd C:\oecIT\Maintenance
-
-
+cd C:\oecIT\Maintenance\BigTest
 
 
 echo.
@@ -48,11 +44,11 @@ echo.
 echo.
 
 
-::timeout /t 30
+timeout /t 30
 PING -n 21 127.0.0.1>nul
 
 
- :: log and call RecycleClean
+REM log and call RecycleClean
 
 (
 echo.
@@ -63,7 +59,7 @@ call RecycleClean.bat
 ) >> C:\oecIT\Logs\RecycleClearLog.txt
 
 
- :: log and call TempClear
+REM log and call TempClear
 
 (
 echo.
@@ -74,7 +70,7 @@ call TempClear.bat
 ) >> C:\oecIT\Logs\TempClearLog.txt
 
 
- :: log and call NetRes
+REM log and call NetRes
 
 (
 echo.
@@ -83,3 +79,6 @@ echo %date%
 echo %time%
 call NetRes
 ) >> C:\oecIT\Logs\NetRes.txt
+
+:EOF
+exit /b %1
