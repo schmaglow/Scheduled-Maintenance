@@ -12,7 +12,7 @@ mshta "javascript: var shell = new ActiveXObject('shell.application'); shell.She
 exit
 
 :start
-cd C:\oecIT\Maintenance\BigTest
+cd C:\oecIT\Maintenance\
 
 
 echo.
