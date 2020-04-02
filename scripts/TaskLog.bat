@@ -106,3 +106,4 @@ PING -n 3 127.0.0.1>nul
 
 
 :EOF
+exit /b %1

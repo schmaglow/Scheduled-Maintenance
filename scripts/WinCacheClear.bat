@@ -10,3 +10,4 @@ CD SoftwareDistribution
 DEL /F /S /Q Download
 net start wuauserv
 
+EXIT /b %1

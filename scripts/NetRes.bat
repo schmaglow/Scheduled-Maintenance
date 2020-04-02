@@ -11,3 +11,4 @@ ipconfig /renew
 ipconfig /flushdns
 shutdown /r /t 120
 
+exit /b %1
