@@ -45,12 +45,13 @@ echo.
 echo.
 
 
-REM timeout /t 30
 PING -n 21 127.0.0.1>nul
 
 
 REM log and call RecycleClean
 
+echo.
+echo Clearing out Recycle Bin...
 (
 echo.
 echo ---------
@@ -58,10 +59,13 @@ echo %date%
 echo %time%
 call RecycleClean.bat
 ) >> C:\oecIT\Logs\RecycleClearLog.txt
+PING -n 3 127.0.0.1>nul
 
 
 REM log and call TempClear
 
+echo.
+echo Clearing out temp files...
 (
 echo.
 echo ---------
@@ -69,10 +73,13 @@ echo %date%
 echo %time%
 call TempClear.bat
 ) >> C:\oecIT\Logs\TempClearLog.txt
+PING -n 3 127.0.0.1>nul
 
 
 REM log and call WinCacheClear
 
+echo.
+echo Resetting Windows Update Cache...
 (
 echo.
 echo ---------
@@ -80,10 +87,13 @@ echo %date%
 echo %time%
 call WinCacheClear.bat
 ) >> C:\oecIT\Logs\CacheClearLog.txt
+PING -n 3 127.0.0.1>nul
 
 
 REM log and call NetRes
 
+echo.
+echo Resetting Network Settings...
 (
 echo.
 echo ---------
@@ -91,6 +101,8 @@ echo %date%
 echo %time%
 call NetRes.bat
 ) >> C:\oecIT\Logs\NetResLog.txt
+PING -n 3 127.0.0.1>nul
+
+
 
 :EOF
-exit /b %1
